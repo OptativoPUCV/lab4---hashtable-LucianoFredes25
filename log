@@ -92,3 +92,15 @@ hashmap.c:56:8: error: unused variable ‘buckets’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 2cddd50
+Fri 14 Apr 2023 01:23:00 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:12: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   56 |   Pair mapa->buckets = (Pair) malloc(sizeof(Pair));
+      |            ^~
+hashmap.c:56:12: error: expected expression before ‘->’ token
+hashmap.c:56:12: error: conversion to non-scalar type requested
+Compilation failed
+44d1817
