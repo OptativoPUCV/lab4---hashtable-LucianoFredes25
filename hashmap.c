@@ -59,18 +59,18 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
-
-    HashMap * mapa = createMap(map->capacity * 2);
+    
+    map->capacity *= 2;
 
     Pair * aux = firstMap(map);
     
     while(true){
       if(aux == NULL)
         break;
-      insertMap(mapa, aux->key , aux->value);
+      insertMap(map, aux->key , aux->value);
+      
       aux = nextMap(map);
     }
-    map = mapa;
 }
 
 
