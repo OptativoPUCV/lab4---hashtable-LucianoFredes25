@@ -134,3 +134,8 @@ hashmap.c:57:7: error: ‘*mapa.buckets’ is used uninitialized [-Werror=uninit
 cc1: all warnings being treated as errors
 Compilation failed
 ae4e55c
+Fri 14 Apr 2023 01:27:02 AM UTC: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  0|0
+925fb81
