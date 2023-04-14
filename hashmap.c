@@ -58,15 +58,15 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-    /*enlarge_called = 1; //no borrar (testing purposes)
+    enlarge_called = 1; //no borrar (testing purposes)
 
     HashMap * mapa = createMap(map->capacity * 2);
 
-    Pair * aux = crea
+    Pair * aux = firstMap(map);
     //Pair * aux = createPair(map->buckets[i]->key, map->buckets[i]->value);
     while(true){
       
-    }*/
+    }
 }
 
 

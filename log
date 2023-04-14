@@ -909,3 +909,17 @@ Fri 14 Apr 2023 03:09:20 AM UTC:
  tests:  16|1
 total_score: 60/70
 0f76299
+Fri 14 Apr 2023 03:10:32 AM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:65:12: error: unused variable ‘aux’ [-Werror=unused-variable]
+   65 |     Pair * aux = firstMap(map);
+      |            ^~~
+hashmap.c:63:15: error: unused variable ‘mapa’ [-Werror=unused-variable]
+   63 |     HashMap * mapa = createMap(map->capacity * 2);
+      |               ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2ac6d1e
