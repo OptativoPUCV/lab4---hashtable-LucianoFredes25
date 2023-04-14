@@ -415,3 +415,9 @@ hashmap.c:90:5: error: ‘else’ without a previous ‘if’
 cc1: all warnings being treated as errors
 Compilation failed
 ddab2fb
+Fri 14 Apr 2023 01:59:07 AM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  6|4
+total_score: 30/70
+6a40aaa
