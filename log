@@ -350,3 +350,9 @@ hashmap.c:52:7: note: ...this statement, but the latter is misleadingly indented
 cc1: all warnings being treated as errors
 Compilation failed
 37fed12
+Fri 14 Apr 2023 01:49:49 AM UTC: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  4|5
+total_score: 20/70
+acd9c5e
