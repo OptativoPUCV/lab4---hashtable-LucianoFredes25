@@ -90,6 +90,11 @@ Pair * searchMap(HashMap * map,  char * key) {
       map->current = aux;
       return map->buckets[aux];
     }
+    else{
+      printf("%d ", aux);
+      aux++;
+      
+    }
 }
 
 
