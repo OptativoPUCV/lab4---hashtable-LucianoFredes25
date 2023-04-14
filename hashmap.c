@@ -70,7 +70,7 @@ void enlarge(HashMap * map) {
       insertMap(mapa, aux->key , aux->value);
       aux = nextMap(map);
     }
-    //map = mapa;
+    map = mapa;
 }
 
 
