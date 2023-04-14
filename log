@@ -838,3 +838,14 @@ hashmap.c:63:15: error: unused variable ‘MapaLargo’ [-Werror=unused-variable
 cc1: all warnings being treated as errors
 Compilation failed
 6f9c580
+Fri 14 Apr 2023 02:52:21 AM UTC: 
+ hashmap.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:65:12: error: unused variable ‘aux’ [-Werror=unused-variable]
+   65 |     Pair * aux = firstMap(map);
+      |            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+2d3cc96
