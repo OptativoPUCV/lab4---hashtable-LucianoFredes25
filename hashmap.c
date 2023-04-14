@@ -91,7 +91,7 @@ Pair * searchMap(HashMap * map,  char * key) {
       if(aux == map->capacity)
         aux=0;
     }
-    else{
+    if(map->buckets[aux]->key == key){
       printf("LOL!");
       map->current = aux;
       return map->buckets[aux];
