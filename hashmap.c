@@ -40,8 +40,8 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-  
-
+  int aux = hash(key,map->capacity);
+  map->buckets[aux] = createPair(key, value);
 }
 
 void enlarge(HashMap * map) {
@@ -53,7 +53,7 @@ void enlarge(HashMap * map) {
 
 HashMap * createMap(long capacity) {
   HashMap * mapa = (HashMap *) malloc(sizeof(HashMap));
-  mapa->buckets = (Pair **)calloc(capacity, sizeof(Pair *));
+  mapa->buckets = (Pair **) calloc(capacity, sizeof(Pair *));
   mapa->size = 0;
   mapa->capacity = capacity;
   mapa->current = -1;
