@@ -46,7 +46,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     if(map->buckets[aux] == NULL || map->buckets[aux]->key == NULL){
       map->buckets[aux] = createPair(key, value);
       break;
-      printf("%d", aux);
+      printf("%d ,", aux);
     } 
     else{
       aux++;
