@@ -43,7 +43,6 @@ void insertMap(HashMap * map, char * key, void * value) {
   int aux = hash(key,map->capacity);
 
   while(true){
-    printf("%d ,", aux);
     if(map->buckets[aux] == NULL || map->buckets[aux]->key == NULL){
       map->buckets[aux] = createPair(key, value);
       break;
@@ -75,14 +74,24 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {    
-
+  
 
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
-
-
+  int aux = hash(key,map->capacity);
+  if(map->buckets[aux] == NULL)
     return NULL;
+  
+  while(true){
+    if(map->buckets[aux] != NULL)
+      return map->buckets[aux];
+    else{
+      aux++;
+      if(aux == map->capacity)
+        aux=0;
+    }
+  }
 }
 
 Pair * firstMap(HashMap * map) {
