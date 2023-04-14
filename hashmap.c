@@ -79,25 +79,22 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
-  /*int aux = hash(key,map->capacity);
+  int aux = hash(key,map->capacity);
   
   while(true){
     printf("%d ,", aux);
     if(map->buckets[aux] == NULL || map->buckets[aux]->key == NULL)
       return NULL;
-
-    if(map->buckets[aux]->key == key){
+    else{
       map->current = aux;
       return map->buckets[aux];
     }
-    else{
-      printf("%d ", aux);
-      aux++;
-      
-    }*/
-    return NULL;
+    aux++;
+    if(aux == map->capacity)
+      aux=0;
+    
+  }
 }
-
 
 Pair * firstMap(HashMap * map) {
 
