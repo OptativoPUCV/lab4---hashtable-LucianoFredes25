@@ -268,3 +268,17 @@ Fri 14 Apr 2023 01:45:07 AM UTC:
  tests:  4|5
 total_score: 20/70
 8e70485
+Fri 14 Apr 2023 01:45:39 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:50:5: error: this ‘else’ clause does not guard... [-Werror=misleading-indentation]
+   50 |     else
+      |     ^~~~
+hashmap.c:52:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+   52 |       if(aux > map->capacity)
+      |       ^~
+cc1: all warnings being treated as errors
+Compilation failed
+bdab7c4
