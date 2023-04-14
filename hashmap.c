@@ -87,14 +87,15 @@ Pair * searchMap(HashMap * map,  char * key) {
       return NULL;
     
     if(map->buckets[aux]->key == key){
-        map->current = aux;
+      printf("LOL!")
+        /*map->current = aux;
         return map->buckets[aux];
       }
     else{
       aux++;
       if(aux == map->capacity)
         aux=0;
-      }
+      }*/
     }
 }
 
