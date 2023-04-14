@@ -83,7 +83,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   
   while(true){
     printf("%d ,", aux);
-    if(map->buckets[aux] == NULL)
+    if(map->buckets[aux] == NULL || map->buckets[aux]->key == NULL)
       return NULL;
     else{
       map->current = aux;
