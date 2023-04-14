@@ -62,8 +62,8 @@ void enlarge(HashMap * map) {
 
     HashMap * mapa = createMap(map->capacity);
     mapa = map;
-    printf("%ld", mapa->size);
-    /*map->capacity *= 2;
+    map->capacity *= 2;
+    Pair * aux = firstMap(map);
   
     map = (HashMap *) realloc(map,(sizeof(HashMap)) * map->capacity);
     
@@ -72,8 +72,8 @@ void enlarge(HashMap * map) {
         break;
       insertMap(map, aux->key , aux->value);
       
-      aux = nextMap(map);
-    }*/
+      aux = nextMap(mapa);
+    }
 }
 
 
