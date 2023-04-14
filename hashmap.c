@@ -88,10 +88,10 @@ Pair * searchMap(HashMap * map,  char * key) {
     
     if(map->buckets[aux]->key == key){
       printf("LOL!")
-        /*map->current = aux;
+        map->current = aux;
         return map->buckets[aux];
       }
-    else{
+    /*else{
       aux++;
       if(aux == map->capacity)
         aux=0;
