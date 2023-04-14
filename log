@@ -882,3 +882,12 @@ hashmap.c:63:15: error: unused variable ‘mapa’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 8b4448a
+Fri 14 Apr 2023 03:08:30 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c:70:1: error: expected identifier or ‘(’ before ‘}’ token
+   70 | }
+      | ^
+Compilation failed
+1c88bc3
