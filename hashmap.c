@@ -60,14 +60,13 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
-    HashMap * MapaLargo = createMap(map->capacity * 2);
-    
-    for(int i = 0 ; i < map->capacity ; i++){
-      if(map->buckets[i] != NULL && map->buckets[i]->key != NULL)
-        insertMap(MapaLargo, map->buckets[i]->key,map->buckets[i]->value);
-    }
+    HashMap * mapa = createMap(map->capacity * 2);
 
-    map = MapaLargo;
+    Pair * aux = crea
+    //Pair * aux = createPair(map->buckets[i]->key, map->buckets[i]->value);
+    while(true){
+      
+    }
 }
 
 
@@ -105,7 +104,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     if(map->buckets[aux] == NULL || map->buckets[aux]->key == NULL)
       return NULL;
 
-    if(strcmp(map->buckets[aux]->key , key) == 0){
+    if(is_equal(map->buckets[aux]->key , key)){
       map->current = aux;
       return map->buckets[aux];
     }
