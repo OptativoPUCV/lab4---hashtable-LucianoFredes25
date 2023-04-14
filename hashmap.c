@@ -50,7 +50,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     } 
     else{
       aux++;
-      if(aux > map->capacity)
+      if(aux == map->capacity)
         aux=0;
     }
   }
