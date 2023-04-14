@@ -161,3 +161,14 @@ hashmap.c:57:9: error: ‘*mapa.buckets’ may be used uninitialized [-Werror=ma
 cc1: all warnings being treated as errors
 Compilation failed
 d65a646
+Fri 14 Apr 2023 01:31:04 AM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:57:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   57 |     Pair * mapa->buckets[i] = (Pair *) malloc(sizeof(Pair));
+      |                ^~
+hashmap.c:57:16: error: expected expression before ‘->’ token
+Compilation failed
+c04b5c4
