@@ -65,8 +65,8 @@ void enlarge(HashMap * map) {
     Pair * aux = crea
     //Pair * aux = createPair(map->buckets[i]->key, map->buckets[i]->value);
     while(true){
-      */
-    }
+      
+    }*/
 }
 
 
