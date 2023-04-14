@@ -63,10 +63,14 @@ void enlarge(HashMap * map) {
     HashMap * mapa = createMap(map->capacity * 2);
 
     Pair * aux = firstMap(map);
-    //Pair * aux = createPair(map->buckets[i]->key, map->buckets[i]->value);
+    
     while(true){
-      
+      if(aux == NULL)
+        break;
+      insertMap(mapa, aux->key , aux->value);
+      aux = nextMap(map);
     }
+    //map = mapa;
 }
 
 

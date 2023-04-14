@@ -923,3 +923,9 @@ hashmap.c:63:15: error: unused variable ‘mapa’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 2ac6d1e
+Fri 14 Apr 2023 03:15:28 AM UTC: 
+ hashmap.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+ tests:  16|1
+total_score: 60/70
+f8f2e8c
