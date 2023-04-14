@@ -78,6 +78,8 @@ void eraseMap(HashMap * map,  char * key) {
   while(true){
     if(strcmp(map->buckets[aux]->key , key) == 0){
       map->buckets[aux]->key = NULL;
+      map->size--;
+      break;
     }
     else{
       aux++;
