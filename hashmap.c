@@ -85,15 +85,15 @@ Pair * searchMap(HashMap * map,  char * key) {
     printf("%d ,", aux);
     if(map->buckets[aux] == NULL || map->buckets[aux]->key == NULL)
       return NULL;
-    else{
-      if(map->buckets[aux]->key == key){
+    
+    if(map->buckets[aux]->key == key){
         map->current = aux;
         return map->buckets[aux];
       }
-      else{
-        aux++;
-        if(aux == map->capacity)
-          aux=0;
+    else{
+      aux++;
+      if(aux == map->capacity)
+        aux=0;
       }
     }
   }
