@@ -207,3 +207,9 @@ hashmap.c:57:15: error: expected expression before ‘.’ token
 hashmap.c:57:15: error: conversion to non-scalar type requested
 Compilation failed
 2d1540e
+Fri 14 Apr 2023 01:32:45 AM UTC: 
+ hashmap.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+ tests:  1|5
+total_score: 10/70
+82412aa
