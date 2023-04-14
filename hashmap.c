@@ -59,10 +59,13 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
-    
-    map->capacity *= 2;
 
-    Pair * aux = firstMap(map);
+    HashMap * mapa = createMap(map->capacity);
+    mapa = map;
+    printf("%ld", mapa->size);
+    /*map->capacity *= 2;
+  
+    map = (HashMap *) realloc(map,(sizeof(HashMap)) * map->capacity);
     
     while(true){
       if(aux == NULL)
@@ -70,7 +73,7 @@ void enlarge(HashMap * map) {
       insertMap(map, aux->key , aux->value);
       
       aux = nextMap(map);
-    }
+    }*/
 }
 
 
