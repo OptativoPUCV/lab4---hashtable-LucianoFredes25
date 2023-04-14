@@ -398,3 +398,20 @@ Fri 14 Apr 2023 01:58:16 AM UTC:
  tests:  6|4
 total_score: 30/70
 69820de
+Fri 14 Apr 2023 01:58:52 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:87:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   87 |     if(map->buckets[aux] != NULL)
+      |     ^~
+hashmap.c:89:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   89 |       return map->buckets[aux];
+      |       ^~~~~~
+hashmap.c:90:5: error: ‘else’ without a previous ‘if’
+   90 |     else{
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ddab2fb
