@@ -67,3 +67,14 @@ Fri 14 Apr 2023 01:21:13 AM UTC:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 09b6349
+Fri 14 Apr 2023 01:21:32 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+test.c: In function ‘createMap’:
+hashmap.c:56:7: error: ‘*mapa.buckets’ is used uninitialized [-Werror=uninitialized]
+   56 |   mapa->buckets[capacity] = NULL;
+      |   ~~~~^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+498958e
