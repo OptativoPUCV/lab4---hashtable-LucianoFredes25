@@ -242,3 +242,9 @@ hashmap.c:45:9: note: each undeclared identifier is reported only once for each 
       |         ^~~~
 Compilation failed
 1fa148d
+Fri 14 Apr 2023 01:43:11 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|5
+total_score: 20/70
+63236b7
