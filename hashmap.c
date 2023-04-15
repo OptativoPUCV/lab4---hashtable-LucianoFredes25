@@ -72,7 +72,7 @@ void enlarge(HashMap * map) {
       break;
     insertMap(map, aux->key, aux->value);
     map->size++;
-    printf("%ld", map->size);
+    printf("%ld,", map->size);
     aux=nextMap(mapa);
   }
 }
