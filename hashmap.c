@@ -66,12 +66,13 @@ void enlarge(HashMap * map) {
   Pair * aux = firstMap(mapa);
   printf("%ld", mapa->size);
   map = createMap(mapa->capacity * 2);
-  printf("%ld", map->size);
+  
   while(true){
     if(aux == NULL)
       break;
     insertMap(map, aux->key, aux->value);
     map->size++;
+    printf("%ld", map->size);
     aux=nextMap(mapa);
   }
 }
