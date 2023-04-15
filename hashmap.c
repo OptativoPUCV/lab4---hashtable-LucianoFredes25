@@ -73,6 +73,7 @@ void enlarge(HashMap * map) {
     insertMap(map, aux->key, aux->value);
     aux=nextMap(mapa);
   }
+  printf("%ld\n", map->capacity);
   Pair * aux1 = firstMap(mapa);
   Pair * aux2 = firstMap(map);
   while(true){
