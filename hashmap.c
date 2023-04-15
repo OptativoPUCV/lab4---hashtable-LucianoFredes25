@@ -59,19 +59,17 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
-  printf("%ld\n", map->capacity);
   
-  HashMap * mapa = createMap(map->capacity * 2);
-  Pair * aux = firstMap(map);
-  
-  while(true){
+  HashMap * mapa = createMap(map->capacity);
+  mapa->buckets = map->buckets;
+  Pair * aux = firstMap(mapa);
+  printf("%s", aux->key);
+  /*while(true){
     if(aux == NULL)
       break;
     insertMap(mapa, aux->key, aux->value);
     aux=nextMap(map);
-  }
-  map = mapa;
-  printf("%ld\n", map->capacity);
+  }*/
 }
 
 
