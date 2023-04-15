@@ -64,7 +64,7 @@ void enlarge(HashMap * map) {
   mapa->buckets = map->buckets;
   mapa->size = map->size;
   Pair * aux = firstMap(mapa);
-  printf("%ld\n", map->capacity);
+  
   map = createMap(mapa->capacity * 2);
   
   while(true){
@@ -72,17 +72,6 @@ void enlarge(HashMap * map) {
       break;
     insertMap(map, aux->key, aux->value);
     aux=nextMap(mapa);
-  }
-  printf("%ld\n", map->capacity);
-  Pair * aux1 = firstMap(mapa);
-  Pair * aux2 = firstMap(map);
-  while(true){
-    if(aux1 == NULL)
-      break;
-    printf("%s", aux1->key);
-    printf(",%s\n", aux2->key);
-    aux1=nextMap(mapa);
-    aux2=nextMap(map);
   }
 }
 
