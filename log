@@ -981,3 +981,25 @@ Sat 15 Apr 2023 02:49:46 AM UTC:
  tests:  16|1
 total_score: 60/70
 8b059a4
+Sat 15 Apr 2023 02:51:10 AM UTC: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:71:5: error: too few arguments to function ‘printf’
+   71 |     printf()
+      |     ^~~~~~
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdio.h:906,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/stdio2.h:84:1: note: declared here
+   84 | printf (const char *__restrict __fmt, ...)
+      | ^~~~~~
+In file included from test.c:4:
+hashmap.c:71:13: error: expected ‘;’ before ‘if’
+   71 |     printf()
+      |             ^
+      |             ;
+   72 |     if(aux == NULL)
+      |     ~~       
+Compilation failed
+53540bc
