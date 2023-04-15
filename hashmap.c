@@ -76,11 +76,12 @@ void enlarge(HashMap * map) {
   Pair * aux1 = firstMap(mapa);
   Pair * aux2 = firstMap(map);
   while(true){
-    if(aux == NULL)
+    if(aux1 == NULL)
       break;
     printf("%s", aux1->key);
     printf(",%s\n", aux2->key);
-    aux=nextMap(mapa);
+    aux1=nextMap(mapa);
+    aux2=nextMap(map);
   }
 }
 
