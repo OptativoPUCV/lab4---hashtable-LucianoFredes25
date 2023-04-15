@@ -79,7 +79,9 @@ void enlarge(HashMap * map) {
   HashMap * mapa = createMap(map->capacity);
   map->buckets = mapa->buckets;
   map->size = 0;
-  
+  for(size_t i = 0 ; i < map->capacity/2 ; i++){
+    insertMap(map, aux[i]->key, aux[i]->value);
+  }
 }
 
 HashMap * createMap(long capacity) {
