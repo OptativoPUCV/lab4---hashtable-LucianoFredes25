@@ -68,7 +68,6 @@ void enlarge(HashMap * map) {
   map = createMap(mapa->capacity * 2);
   printf("%ld", map->size);
   while(true){
-    printf()
     if(aux == NULL)
       break;
     insertMap(map, aux->key, aux->value);
