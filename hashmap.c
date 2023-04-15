@@ -66,10 +66,12 @@ void enlarge(HashMap * map) {
   Pair * aux = firstMap(mapa);
   
   map = createMap(mapa->capacity * 2);
+  
   while(true){
     if(aux == NULL)
       break;
     insertMap(map, aux->key, aux->value);
+    map->size++;
     aux=nextMap(mapa);
   }
 }
