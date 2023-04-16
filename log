@@ -1185,3 +1185,13 @@ Sun 16 Apr 2023 01:55:50 AM UTC:
  tests:  16|1
 total_score: 60/70
 c3fd611
+Sun 16 Apr 2023 01:57:15 AM UTC: 
+ hashmap.c | 20 +++++++++++++++++++-
+ 1 file changed, 19 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:87:34: error: ‘Pair’ has no member named ‘next’
+   87 |             curr_pair = curr_pair->next;
+      |                                  ^~
+Compilation failed
+cb2ad7c
