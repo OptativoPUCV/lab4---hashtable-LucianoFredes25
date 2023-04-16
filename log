@@ -1214,3 +1214,24 @@ hashmap.c:81:17: error: ‘i’ is used uninitialized [-Werror=uninitialized]
 cc1: all warnings being treated as errors
 Compilation failed
 621da2d
+Sun 16 Apr 2023 02:06:32 AM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:78:48: error: expected ‘)’ before ‘;’ token
+   78 |   nuevo->buckets = (Pair *) malloc(sizeof(Pair);
+      |                                   ~            ^
+      |                                                )
+hashmap.c:78:18: error: assignment to ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   78 |   nuevo->buckets = (Pair *) malloc(sizeof(Pair);
+      |                  ^
+hashmap.c:85:4: error: expected ‘;’ before ‘}’ token
+   85 |   }
+      |    ^
+      |    ;
+   86 | }
+      | ~   
+cc1: all warnings being treated as errors
+Compilation failed
+8b4ac37
