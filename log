@@ -1260,3 +1260,8 @@ hashmap.c:82:17: error: ‘i’ is used uninitialized [-Werror=uninitialized]
 cc1: all warnings being treated as errors
 Compilation failed
 aa22610
+Sun 16 Apr 2023 02:07:33 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+25244cb
