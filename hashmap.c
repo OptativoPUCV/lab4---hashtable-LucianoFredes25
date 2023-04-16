@@ -60,7 +60,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   
-  /*HashMap * mapa = createMap(map->capacity);
+  HashMap * mapa = createMap(map->capacity);
   mapa->buckets = map->buckets;
   mapa->size = map->size;
   Pair * aux = firstMap(mapa);
@@ -72,16 +72,6 @@ void enlarge(HashMap * map) {
       break;
     insertMap(map, aux->key, aux->value);
     aux=nextMap(mapa);
-  }*/
-  map->capacity *= 2;
-  HashMap * nuevo = (HashMap *) malloc(sizeof(HashMap) * map->capacity);
-  nuevo->buckets = (Pair **) malloc(sizeof(Pair) * map->capacity);
-  for(int i = 0 ; i < map->capacity ; i++){
-    nuevo->buckets[i] = NULL;
-  }
-  for(int i = 0; i < map->capacity / 2 ; i++){
-    if(map->buckets[i]->key != NULL)
-      insertMap(nuevo, map->buckets[i]->key, map->buckets[i]->value);
   }
 }
 
