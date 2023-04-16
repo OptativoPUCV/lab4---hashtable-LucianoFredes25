@@ -1160,3 +1160,9 @@ hashmap.c:77:3: error: "/*" within comment [-Werror=comment]
 cc1: all warnings being treated as errors
 Compilation failed
 b1738f8
+Sun 16 Apr 2023 01:42:51 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  16|1
+total_score: 60/70
+b27730f

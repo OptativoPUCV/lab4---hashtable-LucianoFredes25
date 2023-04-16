@@ -60,7 +60,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   
-  /*HashMap * mapa = createMap(map->capacity);
+  HashMap * mapa = createMap(map->capacity);
   mapa->buckets = map->buckets;
   mapa->size = map->size;
   Pair * aux = firstMap(mapa);
@@ -72,7 +72,7 @@ void enlarge(HashMap * map) {
       break;
     insertMap(map, aux->key, aux->value);
     aux=nextMap(mapa);
-  }*
+  }
   
   /*Pair ** aux = map->buckets;
   map->capacity *= 2;
