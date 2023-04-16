@@ -60,7 +60,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   
-  /*HashMap * mapa = createMap(map->capacity);
+  HashMap * mapa = createMap(map->capacity);
   mapa->buckets = map->buckets;
   mapa->size = map->size;
   Pair * aux = firstMap(mapa);
@@ -72,26 +72,7 @@ void enlarge(HashMap * map) {
       break;
     insertMap(map, aux->key, aux->value);
     aux=nextMap(mapa);
-  }*/
-  
-  long new_capacity = map->capacity * 2; // Duplicamos la capacidad actual
-    Pair ** new_buckets = (Pair **)malloc(sizeof(Pair *) * new_capacity); // Creamos el nuevo arreglo
-    for (long i = 0; i < new_capacity; i++) {
-        new_buckets[i] = NULL; // Inicializamos cada elemento en NULL
-    }
-    for (long i = 0; i < map->capacity; i++) { // Recorremos los pares del arreglo actual
-        Pair * curr_pair = map->buckets[i];
-        while (curr_pair != NULL) {
-            long new_index = hash(curr_pair->key, new_capacity); // Calculamos el nuevo índice
-            Pair * temp_pair = curr_pair->next; // Guardamos el siguiente par para no perderlo
-            curr_pair->next = new_buckets[new_index]; // Agregamos el par al nuevo arreglo
-            new_buckets[new_index] = curr_pair;
-            curr_pair = temp_pair; // Pasamos al siguiente par del arreglo actual
-        }
-    }
-    free(map->buckets); // Liberamos la memoria del arreglo actual
-    map->buckets = new_buckets; // Actualizamos el arreglo del mapa
-    map->capacity = new_capacity; // Actualizamos la capacidad del mapa
+  }
 }
 
 HashMap * createMap(long capacity) {
