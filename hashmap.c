@@ -76,8 +76,8 @@ void enlarge(HashMap * map) {
   
   Pair ** aux = map->buckets;
   map->capacity *= 2;
-  HashMap * mapa = createMap(map->capacity);
-  map->buckets = mapa->buckets;
+  Pair * BucAux[map->capacity];
+  map->buckets = BucAux;
   map->size = 0;
   for(size_t i = 0 ; i < map->capacity / 2 ; i++){
     if(aux[i]->key != NULL)
