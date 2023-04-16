@@ -1200,3 +1200,17 @@ Sun 16 Apr 2023 02:01:30 AM UTC:
  1 file changed, 6 insertions(+), 19 deletions(-)
  tests:  0|0
 1520a07
+Sun 16 Apr 2023 02:05:41 AM UTC: 
+ hashmap.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:79:10: error: ‘*nuevo.buckets’ may be used uninitialized [-Werror=maybe-uninitialized]
+   79 |     nuevo->buckets[i] = NULL;
+      |     ~~~~~^~~~~~~~~
+hashmap.c:81:17: error: ‘i’ is used uninitialized [-Werror=uninitialized]
+   81 |   for(int i ; i < map->capacity / 2 ; i++){
+      |               ~~^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+621da2d
