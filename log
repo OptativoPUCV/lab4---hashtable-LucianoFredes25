@@ -1249,3 +1249,14 @@ hashmap.c:82:17: error: ‘i’ is used uninitialized [-Werror=uninitialized]
 cc1: all warnings being treated as errors
 Compilation failed
 f1cd077
+Sun 16 Apr 2023 02:07:15 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:82:17: error: ‘i’ is used uninitialized [-Werror=uninitialized]
+   82 |   for(int i ; i < map->capacity / 2 ; i++){
+      |               ~~^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+aa22610
